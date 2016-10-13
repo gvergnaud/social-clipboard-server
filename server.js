@@ -4,8 +4,12 @@ const io = require('socket.io')(http)
 
 
 io.on('connection', socket => {
-  socket.on('copy', date => {
-    socket.broadcast.emit('copy', date)
+  socket.on('text_copy', data => {
+    socket.broadcast.emit('text_copy', data)
+  })
+
+  socket.on('file_copy', date => {
+    socket.broadcast.emit('file_copy', date)
   })
 })
 
