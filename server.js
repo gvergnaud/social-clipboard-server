@@ -8,8 +8,8 @@ io.on('connection', socket => {
     socket.broadcast.emit('text_copy', data)
   })
 
-  socket.on('file_copy', date => {
-    socket.broadcast.emit('file_copy', date)
+  socket.on('file_copy', data => {
+    socket.broadcast.emit('file_copy', data)
   })
 })
 
